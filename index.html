@@ -1,72 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <link rel="icon" href="http://localhost:5000/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Web site created using create-react-app">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Web site created using create-react-app"/>
     <title>React Infinite Scroller</title>
-    <link href="assets/css.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="./static/css/main.84d149cf.chunk.css" rel="stylesheet">
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="root">
-    <header class="header"><a href="https://github.com/rezaerami/react-infinite-scroller-snp/"
-                              title="react-infinite-scroll"><img src="assets/logo.png"
-                                                                 alt="react-infinite-scroll"></a></header>
-    <nav class="navigation"><a aria-current="page" class="active" href="#/">Home</a><a href="#/docs">Docs</a><a
-            target="_blank" href="https://github.com/rezaerami/react-infinite-scroller-snp/">Github</a></nav>
-    <main>
-        <div class="container">
-            <section><h2><span>Step 1: </span><b>Install it</b></h2>
-                <p>Install react-infinite-scroller-snp using npm</p>
-                <pre style="color: white; background: rgb(77, 64, 51) none repeat scroll 0% 0%; text-shadow: black 0px -0.1em 0.2em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.5; -moz-tab-size: 4; hyphens: none; padding: 1em; margin: 0.5em 0px; overflow: auto; border: 0.3em solid rgb(122, 102, 82); border-radius: 0.5em; box-shadow: black 1px 1px 0.5em inset;"><code
-                        style="color: white; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; text-shadow: black 0px -0.1em 0.2em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.5; -moz-tab-size: 4; hyphens: none;">npm install <span
-                        class="token" style="color: rgb(245, 184, 61);">--</span>save react<span class="token"
-                                                                                                 style="color: rgb(245, 184, 61);">-</span>infinite<span
-                        class="token" style="color: rgb(245, 184, 61);">-</span>scroller<span class="token"
-                                                                                              style="color: rgb(245, 184, 61);">-</span>snp</code></pre>
-            </section>
-            <section><h2><span>Step 2: </span><b>Import it</b></h2>
-                <p>Import it into your component</p>
-                <pre style="color: white; background: rgb(77, 64, 51) none repeat scroll 0% 0%; text-shadow: black 0px -0.1em 0.2em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.5; -moz-tab-size: 4; hyphens: none; padding: 1em; margin: 0.5em 0px; overflow: auto; border: 0.3em solid rgb(122, 102, 82); border-radius: 0.5em; box-shadow: black 1px 1px 0.5em inset;"><code
-                        style="color: white; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; text-shadow: black 0px -0.1em 0.2em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.5; -moz-tab-size: 4; hyphens: none;"><span
-                        class="token module" style="color: rgb(209, 148, 158);">import</span> <span
-                        class="token">{</span>useElementScroll<span class="token">,</span> useWindowScroll<span
-                        class="token">}</span> <span class="token module" style="color: rgb(209, 148, 158);">from</span> <span
-                        class="token" style="color: rgb(189, 224, 82);">'react-infinite-scroller-snp'</span><span
-                        class="token">;</span></code></pre>
-            </section>
-            <section><h2><span>Step 3: </span><b>Use it</b></h2>
-                <p>Make window or an element call a function each time that it reaches to the end of the page</p>
-                <pre style="color: white; background: rgb(77, 64, 51) none repeat scroll 0% 0%; text-shadow: black 0px -0.1em 0.2em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.5; -moz-tab-size: 4; hyphens: none; padding: 1em; margin: 0.5em 0px; overflow: auto; border: 0.3em solid rgb(122, 102, 82); border-radius: 0.5em; box-shadow: black 1px 1px 0.5em inset;"><code
-                        style="color: white; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; text-shadow: black 0px -0.1em 0.2em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.5; -moz-tab-size: 4; hyphens: none;"><span
-                        class="token function">useElementScroll</span><span class="token">(</span>elementRef<span
-                        class="token">,</span> fn<span class="token">,</span> threshold<span class="token">)</span><span
-                        class="token">;</span>
-<span class="token function">useWindowScroll</span><span class="token">(</span>fn<span
-                            class="token">,</span> threshold<span class="token">)</span><span
-                            class="token">;</span></code></pre>
-            </section>
-        </div>
-    </main>
-</div>
-<!--
-  This HTML file is a template.
-  If you open it directly in the browser, you will see an empty page.
+<div id="root"></div>
+<script>!function (c) {
+  function e(e) {
+    for (var r, t, n = e[0], o = e[1], u = e[2], i = 0, l = []; i < n.length; i++) t = n[i], Object.prototype.hasOwnProperty.call(a, t) && a[t] && l.push(a[t][0]), a[t] = 0;
+    for (r in o) Object.prototype.hasOwnProperty.call(o, r) && (c[r] = o[r]);
+    for (s && s(e); l.length;) l.shift()();
+    return p.push.apply(p, u || []), f()
+  }
 
-  You can add webfonts, meta tags, or analytics to this file.
-  The build step will place the bundled scripts into the <body> tag.
+  function f() {
+    for (var e, r = 0; r < p.length; r++) {
+      for (var t = p[r], n = !0, o = 1; o < t.length; o++) {
+        var u = t[o];
+        0 !== a[u] && (n = !1)
+      }
+      n && (p.splice(r--, 1), e = i(i.s = t[0]))
+    }
+    return e
+  }
 
-  To begin the development, run `npm start` or `yarn start`.
-  To create a production bundle, use `npm run build` or `yarn build`.
--->
-<script src="assets/bundle.js"></script>
-<script src="assets/1.js"></script>
-<script src="assets/main.js"></script>
-<script src="assets/main_002.js"></script>
+  var t = {}, a = {1: 0}, p = [];
 
+  function i(e) {
+    if (t[e]) return t[e].exports;
+    var r = t[e] = {i: e, l: !1, exports: {}};
+    return c[e].call(r.exports, r, r.exports, i), r.l = !0, r.exports
+  }
+
+  i.m = c, i.c = t, i.d = function (e, r, t) {
+    i.o(e, r) || Object.defineProperty(e, r, {enumerable: !0, get: t})
+  }, i.r = function (e) {
+    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {value: "Module"}), Object.defineProperty(e, "__esModule", {value: !0})
+  }, i.t = function (r, e) {
+    if (1 & e && (r = i(r)), 8 & e) return r;
+    if (4 & e && "object" == typeof r && r && r.__esModule) return r;
+    var t = Object.create(null);
+    if (i.r(t), Object.defineProperty(t, "default", {
+      enumerable: !0,
+      value: r
+    }), 2 & e && "string" != typeof r) for (var n in r) i.d(t, n, function (e) {
+      return r[e]
+    }.bind(null, n));
+    return t
+  }, i.n = function (e) {
+    var r = e && e.__esModule ? function () {
+      return e.default
+    } : function () {
+      return e
+    };
+    return i.d(r, "a", r), r
+  }, i.o = function (e, r) {
+    return Object.prototype.hasOwnProperty.call(e, r)
+  }, i.p = "/";
+  var r = this["webpackJsonpreact-snp-infinite-scroller-docs"] = this["webpackJsonpreact-snp-infinite-scroller-docs"] || [],
+    n = r.push.bind(r);
+  r.push = e, r = r.slice();
+  for (var o = 0; o < r.length; o++) e(r[o]);
+  var s = n;
+  f()
+}([])</script>
+<script src="./static/js/2.61956634.chunk.js"></script>
+<script src="./static/js/main.f274c1a2.chunk.js"></script>
 </body>
 </html>
